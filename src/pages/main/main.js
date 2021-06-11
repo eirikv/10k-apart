@@ -17,6 +17,18 @@ const locations = [
     name: 'Bergen, Norge',
     geoData: 'lat=60.391262&lon=5.322054',
   },
+  {
+    name: 'Arendal, Norge',
+    geoData: 'lat=58.459469&lon=8.766790',
+  },
+  {
+    name: 'Berlin, Tyskland',
+    geoData: 'lat=52.520008&lon=13.404954',
+  },
+  {
+    name: 'New York City, USA',
+    geoData: 'lat=40.712776&lon=-74.005974',
+  },
 ];
 
 class Main {
