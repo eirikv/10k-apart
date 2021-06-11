@@ -68,13 +68,27 @@ section > section > div {
 article > h2 {
   font-weight: normal;
   margin-top: 0;
+  font-size: 20px;
 }
 
 article {
   background-color: white;
+  text-align: center;
   padding: 24px;
   max-width: 210px;
   margin-bottom: 24px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
+}
+
+.data-value {
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
 }
