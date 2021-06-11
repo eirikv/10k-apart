@@ -8,15 +8,15 @@ const port = 8080;
 app.set('view engine', 'ejs');
 app.use(compression());
 app.use(minifyHTML({
-  override:      true,
+  override: true,
   exception_url: false,
   htmlMinifier: {
-    removeComments:            true,
-    collapseWhitespace:        true,
+    removeComments: true,
+    collapseWhitespace: true,
     collapseBooleanAttributes: true,
-    removeAttributeQuotes:     true,
-    removeEmptyAttributes:     true,
-    minifyJS:                  true
+    removeAttributeQuotes: true,
+    removeEmptyAttributes: true,
+    minifyJS: true
   }
 }));
 
@@ -25,6 +25,8 @@ app.get('/', (req, res) => {
     title: 'Fake Yr.no',
   });
 })
+
+app.use('/static', express.static(__dirname + '/resources'))
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
