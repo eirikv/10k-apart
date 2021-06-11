@@ -13,7 +13,13 @@ class Main {
 
   async fetchData() {
     const data = await fetch(
-      'https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=59.9139&lon=10.7522'
+      'https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=59.9139&lon=10.7522',
+      {
+        method: 'GET',
+        headers: {
+          'User-Agent': 'Firefox/88.0',
+        },
+      },
     ).then(res => res.json());
 
     console.log(data);
