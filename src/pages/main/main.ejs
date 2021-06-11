@@ -9,8 +9,20 @@
 </head>
 
 <body>
-    <h1>Været i Oslo</h1>
-    <img height=100 width=100 src="public/images/<%= weatherSymbolCode %>.svg" alt="<%= weatherSymbolCode %>">
+ <div></div>
+    <header>
+        <h1>
+            <img src="public/images/yr-logo.png" alt="Yr" /><span>-mini</span>
+        </h1>
+        <form>
+            <input type="text" placeholder="Søk" />
+            <button type="submit">Søk</button>
+        </form>
+    </header>
+    <section>
+        <h2>Været i Oslo</h2>
+        <img height=100 width=100 src="public/images/<%= weatherSymbolCode %>.svg" alt="<%= weatherSymbolCode %>">
+    </section>
 </body>
 
 </html>
