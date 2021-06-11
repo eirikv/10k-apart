@@ -1,13 +1,14 @@
 body {
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(196,217,230,1) 100%);
+  background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
   font-family: "Arial", sans-serif;
   min-width: 480px;
 }
 
-header {
+body > header {
   position: relative;
   background: #fff;
   min-height: 100px;
@@ -16,27 +17,26 @@ header {
   padding: 0 20px;
 }
 
-header h1 {
+body > header h1 {
   display: flex;
 }
 
-header h1 img {
-  display: inline;
+body > header h1 img {
   width: 40px;
   height: 40px;
 }
 
-header *:first-child {
+body > header *:first-child {
   justify-self: start;
   align-self: center;
 }
 
-header *:last-child {
+body > header *:last-child {
   justify-self: end;
   align-self: center;
 }
 
-header form input {
+body > header form input {
   height: 25px;
   border-radius: 6px;
   border: 1px solid #000;
@@ -47,7 +47,7 @@ header form input {
   width: 125px;
 }
 
-header form button {
+body > header form button {
   border: 1px solid #000;
   height: 25px;
   border-radius: 5px;
@@ -55,11 +55,26 @@ header form button {
   font-size: 14px;
 }
 
-h1 {
-  text-align: center;
+body > section {
+  max-width: 1280px;
+  margin: 0 20px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
+section > section > div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+article > h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+article {
+  background-color: white;
+  padding: 24px;
+  max-width: 210px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -9,7 +9,6 @@
 </head>
 
 <body>
- <div></div>
     <header>
         <h1>
             <img src="public/images/yr-logo.png" alt="Yr" /><span>-mini</span>
@@ -20,8 +19,35 @@
         </form>
     </header>
     <section>
-        <h2>Været i Oslo</h2>
-        <img height=100 width=100 src="public/images/<%= weatherSymbolCode %>.svg" alt="<%= weatherSymbolCode %>">
+        <header>
+            <h2>Oslo, Norge</h2>
+        </header>
+        <article>
+            <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
+                 alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
+            <p aria-label="Temperaturen nå">
+                <%= instant.details.air_temperature %>°C
+            </p>
+        </article>
+        <section>
+            <header>
+                <h3>Neste timen</h3>
+            </header>
+            <div>
+                <article>
+                    <h2>Sannsynlighet for ⚡️:</h2>
+                    <p class="data-value">
+                        <%= next_1_hours.details.probability_of_thunder %>%
+                    </p>
+                </article>
+                <article>
+                    <h2>Sannsynlighet for 🌧:</h2>
+                    <p class="data-value">
+                        <%= next_1_hours.details.probability_of_precipitation %>%
+                    </p>
+                </article>
+            </div>
+        </section>
     </section>
 </body>
 
