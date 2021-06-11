@@ -1,7 +1,6 @@
 const express = require('express');
 const compression = require('compression');
 const minifyHTML = require('express-minify-html');
-
 const Main = require('./pages/main');
 
 const app = express();

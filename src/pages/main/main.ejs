@@ -18,17 +18,19 @@
             <button type="submit">Søk</button>
         </form>
     </header>
-    <section>
-        <header>
-            <h2>Oslo, Norge</h2>
-        </header>
-        <article>
-            <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
-                alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
-            <p aria-label="Temperaturen nå" class="data-value">
-                <%= instant.details.air_temperature %>°C
-            </p>
-        </article>
+    <div class="container">
+        <section>
+            <header>
+                <h2>Oslo, Norge</h2>
+            </header>
+            <article>
+                <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
+                    alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
+                <p aria-label="Temperaturen nå" class="data-value">
+                    <%= instant.details.air_temperature %>°C
+                </p>
+            </article>
+        </section>
         <section>
             <header>
                 <h3>Neste timen</h3>
@@ -52,7 +54,7 @@
                 </article>
             </div>
         </section>
-    </section>
+    </div>
 </body>
 
 </html>

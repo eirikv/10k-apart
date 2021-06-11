@@ -55,16 +55,6 @@ body > header form button {
   font-size: 14px;
 }
 
-body > section {
-  max-width: 1280px;
-  margin: 0 20px;
-}
-
-section > section > div {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
 article > h2 {
   font-weight: normal;
   margin-top: 0;
@@ -75,10 +65,10 @@ article {
   background-color: white;
   text-align: center;
   padding: 24px;
+  min-width: 200px;
   max-width: 210px;
   margin-bottom: 24px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 24px;
   border-radius: 4px;
 }
 
@@ -90,5 +80,14 @@ article {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
