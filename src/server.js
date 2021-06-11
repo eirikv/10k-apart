@@ -24,7 +24,7 @@ app.use(minifyHTML({
 
 app.get('/', (req, res) => Main.render(res));
 
-app.use('/static', express.static(__dirname + '/resources'))
+app.use('/public', express.static(__dirname + '/public'))
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
