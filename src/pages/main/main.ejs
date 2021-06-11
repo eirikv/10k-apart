@@ -16,36 +16,42 @@
             <button type="submit">Søk</button>
         </form>
     </header>
-    <section>
-        <header>
-            <h2><%= location.name %></h2>
-        </header>
-        <article>
-            <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
-                 alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
-            <p aria-label="Temperaturen nå">
-                <%= instant.details.air_temperature %>°C
-            </p>
-        </article>
+    <div class="container">
+        <section>
+            <header>
+                <h2><%= location.name %></h2>
+            </header>
+            <article>
+                <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
+                    alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
+                <p aria-label="Temperaturen nå" class="data-value">
+                    <%= instant.details.air_temperature %>°C
+                </p>
+            </article>
+        </section>
         <section>
             <header>
                 <h3>Neste timen</h3>
             </header>
-            <div>
+            <div class="flex">
                 <article>
-                    <h2>Sannsynlighet for ⚡️:</h2>
+                    <h2>Sannsynlighet for
+                        <span role="img" aria-label="tordenvær">⚡️</span>
+                    </h2>
                     <p class="data-value">
                         <%= next_1_hours.details.probability_of_thunder %>%
                     </p>
                 </article>
                 <article>
-                    <h2>Sannsynlighet for 🌧:</h2>
+                    <h2>Sannsynlighet for
+                        <span role="img" , aria-label="regn">🌧</span>
+                    </h2>
                     <p class="data-value">
                         <%= next_1_hours.details.probability_of_precipitation %>%
                     </p>
                 </article>
             </div>
         </section>
-    </section>
+    </div>
 </body>
 </html>
