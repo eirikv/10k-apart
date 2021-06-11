@@ -1,0 +1,25 @@
+{
+  "name": "10k-apart",
+  "version": "1.0.0",
+  "description": "10k-apart fagdag 11.06.2021",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eirikv/10k-apart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eirikv/10k-apart/issues"
+  },
+  "homepage": "https://github.com/eirikv/10k-apart#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-minify-html": "^0.12.0"
+  }
+}
