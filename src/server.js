@@ -1,6 +1,8 @@
 const express = require('express');
 const compression = require('compression');
-var minifyHTML = require('express-minify-html');
+const minifyHTML = require('express-minify-html');
+
+const Main = require('./pages/main');
 
 const app = express();
 const port = 8080;
@@ -20,11 +22,7 @@ app.use(minifyHTML({
   }
 }));
 
-app.get('/', (req, res) => {
-  res.render(__dirname + '/pages/index', {
-    title: 'Fake Yr.no',
-  });
-})
+app.get('/', (req, res) => Main.render(res));
 
 app.use('/static', express.static(__dirname + '/resources'))
 
