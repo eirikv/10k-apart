@@ -2,9 +2,7 @@
 <html>
 
 <head>
-    <title>
-        <%= title %>
-    </title>
+    <title>YR-mini</title>
     <link rel="stylesheet" href="public/css/styles.css">
 </head>
 
@@ -13,14 +11,14 @@
         <h1>
             <img src="public/images/yr-logo.png" alt="Yr" /><span>-mini</span>
         </h1>
-        <form>
-            <input type="text" placeholder="Søk" />
+        <form method="/">
+            <input type="text" placeholder="Søk" name="location" />
             <button type="submit">Søk</button>
         </form>
     </header>
     <section>
         <header>
-            <h2>Oslo, Norge</h2>
+            <h2><%= location.name %></h2>
         </header>
         <article>
             <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
@@ -50,5 +48,4 @@
         </section>
     </section>
 </body>
-
 </html>

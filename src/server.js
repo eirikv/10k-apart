@@ -22,7 +22,7 @@ app.use(minifyHTML({
   }
 }));
 
-app.get('/', (req, res) => Main.render(res));
+app.get('/', (req, res) => Main.render(req, res));
 
 app.use('/public', express.static(__dirname + '/public'))
 
