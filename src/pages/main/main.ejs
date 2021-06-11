@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= title %></title>
-        <link rel="stylesheet" href="public/css/styles.css">
-    </head>
-    <body>
-        <h1>Været i Oslo</h1>
-        <img height=100 width=100 src="sunny.svg" alt="Sol">
-    </body>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+    <h1>Været i Oslo</h1>
+    <img height=100 width=100 src="public/images/<%= weatherSymbolCode %>.svg" alt="<%= weatherSymbolCode %>">
+</body>
+
 </html>
