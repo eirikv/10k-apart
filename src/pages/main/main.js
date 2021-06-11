@@ -3,10 +3,14 @@ const fetch = require('node-fetch');
 class Main {
   async render(res) {
     const data = await this.fetchData();
-    const weatherSymbolCode = data.properties.timeseries[0].data.next_12_hours.summary.symbol_code;
+    const weatherData = data.properties.timeseries[0].data;
+
+    const instant = weatherData.instant;
+    const nextHour = weatherData.next_1_hours;
+
     res.render(__dirname + '/main', {
       title: 'Fake Yr.no',
-      weatherSymbolCode: weatherSymbolCode,
+      ...weatherData
     });
   }
 

@@ -9,8 +9,29 @@
 </head>
 
 <body>
-    <h1>Været i Oslo</h1>
-    <img height=100 width=100 src="public/images/<%= weatherSymbolCode %>.svg" alt="<%= weatherSymbolCode %>">
+    <h1>Oslo, Norge</h1>
+    <div class="card">
+        <img height=100 width=100 src="public/images/<%= next_1_hours.summary.symbol_code %>.svg"
+            alt="Været nå: <%= next_1_hours.summary.symbol_code %>">
+        <p class="data-value" aria-label="Temperaturen nå">
+            <%= instant.details.air_temperature %>°C
+        </p>
+    </div>
+    <h1>Neste timen</h1>
+    <div class="flex">
+        <div class="card">
+            <h2>Sannsynlighet for ⚡️:</h2>
+            <p class="data-value">
+                <%= next_1_hours.details.probability_of_thunder %>%
+            </p>
+        </div>
+        <div class="card">
+            <h2>Sannsynlighet for 🌧:</h2>
+            <p class="data-value">
+                <%= next_1_hours.details.probability_of_precipitation %>%
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>
